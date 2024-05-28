@@ -1,4 +1,4 @@
-const cacheName = 'static-v3';
+const cacheName = 'static-v4';
 const filesToCache = [
   '/test-pwa/index.html',
   '/test-pwa/styles.css',

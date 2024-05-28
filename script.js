@@ -19,6 +19,40 @@ function animateOnScroll() {
 
 window.addEventListener('load', animateOnScroll);
 
+// Animasi typing header
+const typedTextSpan = document.querySelector('.typed-text');
+const textArray = ['Teofide Pangemanan'];
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 100); // Mengatur kecepatan mengetik
+  } else {
+    setTimeout(deleteText, 3000); // Jeda sebelum menghapus teks
+  }
+}
+
+function deleteText() {
+  if (charIndex > 0) {
+    typedTextSpan.textContent = textArray[textArrayIndex].slice(0, charIndex - 1);
+    charIndex--;
+    setTimeout(deleteText, 50); // Mengatur kecepatan menghapus teks
+  } else {
+    textArrayIndex++;
+    if (textArrayIndex >= textArray.length) {
+      textArrayIndex = 0;
+    }
+    setTimeout(type, 1000); // Jeda sebelum mengetik teks berikutnya
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(type, 1000); // Jeda sebelum memulai animasi
+});
+
 // Lightbox gallery
 const gallery = document.querySelector('.image-grid');
 const lightbox = document.createElement('div');
