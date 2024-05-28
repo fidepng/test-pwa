@@ -1,6 +1,6 @@
 const cacheName = 'static-v4';
 const filesToCache = [
-  '/',
+  '/test-pwa/',
   '/test-pwa/index.html',
   '/test-pwa/styles.css',
   '/test-pwa/script.js',
