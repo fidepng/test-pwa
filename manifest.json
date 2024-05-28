@@ -1,7 +1,7 @@
 {
   "name": "Personal Page",
   "short_name": "fide",
-  "start-url": "/",
+  "start_url": "/",
   "id": "/test-pwa/",
   "scope": "/test-pwa/",
   "display": "standalone",
