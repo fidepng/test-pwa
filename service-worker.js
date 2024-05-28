@@ -1,6 +1,5 @@
-const cacheName = 'static-v2';
+const cacheName = 'static-v3';
 const filesToCache = [
-  '/',
   '/index.html',
   '/styles.css',
   '/script.js',
