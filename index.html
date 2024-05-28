@@ -104,13 +104,13 @@
     
     <script>
         if ('serviceWorker' in navigator) {
-          window.addEventListener("load", function() {
-            navigator.serviceWorker
-                .register('./service-worker.js', { scope: '/' })
-                .then(res => console.log('Service Worker Registered'))
-                .catch(err => console.log('Service Worker Not Registered', err)); 
-          })  
-        }
+            window.addEventListener('load', function() {
+                navigator.serviceWorker
+                    .register('./service-worker.js', { scope: '/test-pwa/' })
+                    .then(res => console.log('Service Worker Registered'))
+                    .catch(err => console.log('Service Worker Not Registered', err));
+            });
+        }       
       </script>
 </body>
 </html>

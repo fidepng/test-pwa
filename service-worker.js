@@ -1,23 +1,23 @@
 const cacheName = 'static-v3';
 const filesToCache = [
-  '/index.html',
-  '/styles.css',
-  '/script.js',
-  '/manifest.json',
-  '/splash.html',
-  '/asset/img/profil.jpg',
-  '/asset/img/1.jpg',
-  '/asset/img/2.jpg',
-  '/asset/img/3.jpg',
-  '/asset/img/4.jpg',
-  '/asset/img/5.jpg',
-  '/asset/img/6.jpg',
-  '/asset/img/instagram.png',
-  '/asset/img/gmail.png',
-  '/asset/img/github.png',
-  '/asset/img/icon-192.png',
-  '/asset/img/icon-512.png',
-  '/asset/img/maskable-icon.png'
+  '/test-pwa/index.html',
+  '/test-pwa/styles.css',
+  '/test-pwa/script.js',
+  '/test-pwa/manifest.json',
+  '/test-pwa/splash.html',
+  '/test-pwa/asset/img/profil.jpg',
+  '/test-pwa/asset/img/1.jpg',
+  '/test-pwa/asset/img/2.jpg',
+  '/test-pwa/asset/img/3.jpg',
+  '/test-pwa/asset/img/4.jpg',
+  '/test-pwa/asset/img/5.jpg',
+  '/test-pwa/asset/img/6.jpg',
+  '/test-pwa/asset/img/instagram.png',
+  '/test-pwa/asset/img/gmail.png',
+  '/test-pwa/asset/img/github.png',
+  '/test-pwa/asset/img/icon-192.png',
+  '/test-pwa/asset/img/icon-512.png',
+  '/test-pwa/asset/img/maskable-icon.png'
 ];
 
 self.addEventListener('install', function(event) {
