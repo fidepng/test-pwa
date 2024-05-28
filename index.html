@@ -106,9 +106,9 @@
         if ('serviceWorker' in navigator) {
           window.addEventListener("load", function() {
             navigator.serviceWorker
-                .register('./test.pwa/service-worker.js')
+                .register('./service-worker.js')
                 .then(res => console.log('Service Worker Registered'))
-                .catch(err => console.log('Service Worker Not Registered'))  
+                .catch(err => console.log('Service Worker Not Registered')) 
           })  
         }
       </script>
