@@ -1,4 +1,4 @@
-const cacheName = 'static-v1';
+const cacheName = 'static-v2';
 const filesToCache = [
   '/',
   '/index.html',
@@ -41,12 +41,3 @@ self.addEventListener('fetch', function(event) {
       })
   );
 });
-
-if ("Service Worker" in navigator)  {
-  window.addEventListener("load", function() {
-    navigator.serviceWorker
-      .register("./test-pwa/sw.js")
-      .then(res => console.log("service worker registered"))
-      .catch(err => console.log("service worker not registered"))
-  })
-}
