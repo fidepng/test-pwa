@@ -1,0 +1,52 @@
+const cacheName = 'static-v1';
+const filesToCache = [
+  '/',
+  '/index.html',
+  '/styles.css',
+  '/script.js',
+  '/manifest.json',
+  '/splash.html',
+  '/asset/img/profil.jpg',
+  '/asset/img/1.jpg',
+  '/asset/img/2.jpg',
+  '/asset/img/3.jpg',
+  '/asset/img/4.jpg',
+  '/asset/img/5.jpg',
+  '/asset/img/6.jpg',
+  '/asset/img/instagram.png',
+  '/asset/img/gmail.png',
+  '/asset/img/github.png',
+  '/asset/img/icon-192.png',
+  '/asset/img/icon-512.png',
+  '/asset/img/maskable-icon.png'
+];
+
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(cacheName)
+      .then(function(cache) {
+        return cache.addAll(filesToCache);
+      })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      })
+  );
+});
+
+if ("Service Worker" in navigator)  {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker
+      .register("./test-pwa/sw.js")
+      .then(res => console.log("service worker registered"))
+      .catch(err => console.log("service worker not registered"))
+  })
+}
