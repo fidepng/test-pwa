@@ -21,7 +21,7 @@ window.addEventListener('load', animateOnScroll);
 
 // Animasi typing header
 const typedTextSpan = document.querySelector('.typed-text');
-const textArray = ['Teofide Pangemanan'];
+const textArray = ['Halo! Selamat Datang. '];
 let textArrayIndex = 0;
 let charIndex = 0;
 
