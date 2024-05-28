@@ -30,13 +30,15 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
+  const isLocalHost = self.location.origin.startsWith('file://');
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
         if (response) {
           return response;
         }
-        return fetch(event.request);
+        return isLocalHost ? caches.match('/index.html') : fetch(event.request);
       })
   );
 });
+
